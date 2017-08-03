@@ -8,18 +8,18 @@ import {
 import Foo from './foo.jsx';
 jest.dontMock('./foo.jsx');
 
-
 describe("Foo component", function() {
   const fooCom = shallow(<Foo name="good"/>);
-  it("name title test", function() {
+
+  it("no name test", () => {
+    expect(shallow(<Foo />).find('h2').text()).toEqual('titlefootya');
+  });
+
+  it("name title test", () => {
     expect(fooCom.find('h2').text()).toEqual('titlegood');
   });
 
-  // it("contains spec with an expectation", function() {
-  //   expect(fooCom.is('.foo')).toBe(true);
-  // });
-
-  it("class name is .foo", function() {
+  it("class name is .foo", () => {
     expect(fooCom.find('.foo').length).toBe(1);
   });
 });
