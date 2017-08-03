@@ -5,21 +5,21 @@ import {
   render
 } from 'enzyme';
 
-jest.dontMock('./foo');
+import Foo from './foo.jsx';
+jest.dontMock('./foo.jsx');
 
-const Foo = require('./foo');
 
-describe("A suite", function() {
-  it("contains spec with an expectation", function() {
-    // expect(true).toBe(true);
-    expect(shallow(<Foo />).contains(<h2>title</h2>)).toBe(true);
+describe("Foo component", function() {
+  const fooCom = shallow(<Foo name="good"/>);
+  it("name title test", function() {
+    expect(fooCom.find('h2').text()).toEqual('titlegood');
   });
 
-  it("contains spec with an expectation", function() {
-    expect(shallow(<Foo />).is('.foo')).toBe(true);
-  });
+  // it("contains spec with an expectation", function() {
+  //   expect(fooCom.is('.foo')).toBe(true);
+  // });
 
-  it("contains spec with an expectation", function() {
-    expect(mount(<Foo />).find('.foo').length).toBe(1);
+  it("class name is .foo", function() {
+    expect(fooCom.find('.foo').length).toBe(1);
   });
 });

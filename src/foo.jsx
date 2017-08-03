@@ -1,10 +1,9 @@
-import React, { PropTypes } from 'react';
-
-const propTypes = {};
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const defaultProps = {};
 
-class Foo extends React.Component {
+export default class Foo extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -12,13 +11,15 @@ class Foo extends React.Component {
   render() {
     return (
       <div className="foo" >
-      	<h2>title</h2>
+      	<h2>title{this.props.name}</h2>
       </div>
     );
   }
 }
 
-Foo.propTypes = propTypes;
-Foo.defaultProps = defaultProps;
-
-export default Foo;
+Foo.propTypes = {
+	name: PropTypes.string,
+};
+Foo.defaultProps = {
+	name: 'footya',
+};
