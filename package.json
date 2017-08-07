@@ -4,22 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node ./server.js",
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.2",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.4",
     "jest": "^20.0.4",
     "prop-types": "^15.5.10",
     "react-test-renderer": "^15.6.1",
-    "regenerator-runtime": "^0.10.5"
+    "regenerator-runtime": "^0.10.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.18.2"
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2"
   }
 }
