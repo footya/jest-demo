@@ -3,10 +3,12 @@ jest,react test, redux test
 
 ## 简单function测试
 
+[sum.js](https://github.com/footya/jest-demo/blob/master/src/sum.js)
 [sum.test.js](https://github.com/footya/jest-demo/blob/master/src/sum.test.js)
 
 ## react dom 测试
 
+[foo.jsx](https://github.com/footya/jest-demo/blob/master/src/foo.jsx)
 [foo.test.js](https://github.com/footya/jest-demo/blob/master/src/foo.test.js)
 
 
