@@ -1,8 +1,13 @@
 # jest-demo
 jest,react test, redux test
 
+## 简单function测试
+
+[sum.test.js](https://github.com/footya/jest-demo/blob/master/src/sum.test.js)
 
 ## react dom 测试
+
+[foo.test.js](https://github.com/footya/jest-demo/blob/master/src/foo.test.js)
 
 
 ## redux 测试
